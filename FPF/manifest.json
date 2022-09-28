@@ -1,0 +1,24 @@
+{
+    "name": "Facebook Post Filter",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Removes Facebook content based on keywords that are given by the user",
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "description": "Removes all posts from Facebook",
+        "css": ["style.css"]
+    }],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Facebook Post Filter"
+    },
+    "icons": {
+        "16": "icon/favicon-16x16.png",
+        "32": "icon/favicon-32x32.png"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": ["storage", "tabs"]
+}
